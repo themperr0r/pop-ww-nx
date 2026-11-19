@@ -1,0 +1,40 @@
+# Original Xbox game files
+*.xbe
+*.iso
+*.xiso
+*.bf
+*.bin
+*.xbe.*
+
+# Extracted game data
+MEDIA/
+MENU/
+SOUND/
+VIDEO/
+bf_extracted/
+probe_extract/
+pop-ww-data/
+game-data/
+assets/
+
+# Build outputs
+build/
+dist/
+out/
+*.o
+*.elf
+*.nro
+*.a
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor and operating system files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
