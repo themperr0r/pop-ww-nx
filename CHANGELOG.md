@@ -65,3 +65,27 @@ Date: 2026-11-18
 - The zero-unsupported-instructions result applies only to the 42 instructions in this experiment.
 - Call classification and function boundaries still require further validation.
 - No ARM64 code generation or playable Nintendo Switch port exists yet.
+
+
+## [0.5.0] - 2026-11-22
+
+### Added
+- Recursive XBE code scanning and per-function disassembly output.
+- Xbox kernel thunk-table import resolution.
+- Indirect kernel API call mapping.
+- Callsite-to-function mapping tools.
+
+### Research Findings
+- Discovered 74 function-entry candidates and decoded 3,712 unique instructions.
+- Located the retail Xbox kernel thunk table at `0x0054B2E0`.
+- Resolved all 153 entries in the discovered kernel import table.
+- Mapped 46 indirect callsites to kernel APIs; 16 remain unresolved.
+- Identified memory allocation APIs including `NtAllocateVirtualMemory` and `NtFreeVirtualMemory`.
+- Found two callers of `0x003D4034`.
+- Observed returned memory being populated with fields and linked into a data structure, suggesting a possible allocator or memory-pool role.
+
+### Notes
+- Function entries are discovered candidates, not fully verified function boundaries.
+- The recursive scan covers only reachable code discovered by the current analysis.
+- The role of `0x003D4034` remains a hypothesis and requires further investigation.
+- No ARM64 code generation or playable Nintendo Switch port exists yet.

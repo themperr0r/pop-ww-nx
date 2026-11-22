@@ -42,3 +42,13 @@ Thumbs.db
 # Local XBE analysis output
 recompiler/entry_instructions.json
 recompiler/entry_ir.json
+
+# Generated XBE analysis reports
+analysis_results.json
+recompiler/analysis_results.json
+recompiler/calls_by_function.json
+recompiler/kernel_call_map.json
+recompiler/kernel_imports.json
+
+# Locally sourced third-party export table
+recompiler/xboxkrnl.h
