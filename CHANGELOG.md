@@ -39,3 +39,29 @@ Date: 2026-11-18
 ### Next Milestone
 - Inspect default.xbe header, entry point, sections and import tables.
 - Establish an initial executable analysis report.
+
+## [0.4.0] - 2026-11-22
+
+### Added
+- Initial XBE section-table parsing and section-aware address mapping research.
+- Entry-point disassembly using Capstone.
+- Initial x86 instruction-to-IR translation prototype.
+- Recompiler scripts copied into the project repository.
+- Python dependency declaration through `requirements.txt`.
+- Initial recompiler technical documentation.
+
+### Research Findings
+- Identified the XBE entry point at virtual address `0x003D674C`.
+- Parsed 35 XBE section entries.
+- Confirmed file-backed address mappings for the entry-point code and several referenced addresses.
+- Processed 42 instructions in the initial entry-point IR experiment.
+- Identified three direct call targets from the entry-point routine:
+  - `0x003D1A6A`
+  - `0x003D7C1C`
+  - `0x003D1793`
+
+### Notes
+- The current IR translator supports only a limited instruction subset.
+- The zero-unsupported-instructions result applies only to the 42 instructions in this experiment.
+- Call classification and function boundaries still require further validation.
+- No ARM64 code generation or playable Nintendo Switch port exists yet.
